@@ -34,7 +34,7 @@ void loop() {
   }
 
   switch (dato) {
-    case 'F':
+    case 'R':
       digitalWrite(motorA1, LOW);
       delay(1);
       digitalWrite(motorA2, HIGH);
@@ -48,6 +48,7 @@ void loop() {
       analogWrite(motorBspeed, vSpeed);
       break;
 
+/*
     case 'I':
       digitalWrite(motorA1, LOW);
       delay(1);
@@ -75,8 +76,8 @@ void loop() {
       analogWrite(motorAspeed, vSpeed);
       analogWrite(motorBspeed, 0);
       break;
-
-    case 'B':
+*/
+    case 'L':
       digitalWrite(motorA1, HIGH);
       delay(1);
       digitalWrite(motorA2, LOW);
@@ -89,7 +90,7 @@ void loop() {
       analogWrite(motorAspeed, vSpeed);
       analogWrite(motorBspeed, vSpeed);
       break;
-
+/*
     case 'J':
       digitalWrite(motorA1, HIGH);
       delay(1);
@@ -117,8 +118,8 @@ void loop() {
       analogWrite(motorAspeed, vSpeed);
       analogWrite(motorBspeed, 0);
       break;
-
-    case 'L':
+*/
+    case 'B':
       digitalWrite(motorA2, HIGH);
       delay(1);
       digitalWrite(motorA1, LOW);
@@ -132,7 +133,7 @@ void loop() {
       analogWrite(motorBspeed, vSpeed);
       break;
 
-    case 'R':
+    case 'F':
       digitalWrite(motorA2, LOW);
       delay(1);
       digitalWrite(motorA1, HIGH);
@@ -146,11 +147,18 @@ void loop() {
       analogWrite(motorBspeed, vSpeed);
       break;
 
-    default:
+    case 'S':
       analogWrite(motorA1, 0);
       analogWrite(motorA2, 0);
       analogWrite(motorB1, 0);
       analogWrite(motorB2, 0);
+      break;
+
+    default:
+        analogWrite(motorA1, 0);
+        analogWrite(motorA2, 0);
+        analogWrite(motorB1, 0);
+        analogWrite(motorB2, 0);
       break;
   }
 }
